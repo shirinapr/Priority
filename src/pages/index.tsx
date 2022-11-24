@@ -5,7 +5,9 @@ import type { NextPage } from 'next';
 import { Field, Form } from 'react-final-form';
 
 const Home: NextPage = () => {
-  const onSubmit = (e) => { console.log(e); };
+  const onSubmit = (e) => {
+    console.log(e);
+  };
   return (
     <div>
       <h3>
@@ -20,10 +22,13 @@ const Home: NextPage = () => {
           <form onSubmit={handleSubmit}>
             <label>Login</label>
             <Field name="email">
-              {({ input }) => (<input type="email" placeholder="Enter Email" {...input} />)}
+              {({ input }) => (
+                <input type="email" placeholder="Enter Email" {...input} />
+              )}
             </Field>
             <Field name="password">
-              {({ input }) => (<input type="password" placeholder="Password" {...input} />
+              {({ input }) => (
+                <input type="password" placeholder="Password" {...input} />
               )}
             </Field>
             <button type="submit">Login</button>
@@ -37,19 +42,28 @@ const Home: NextPage = () => {
           <form onSubmit={handleSubmit}>
             <label>Sign up</label>
             <Field name="email">
-              {({ input }) => (<input type="email" placeholder="Enter Email" {...input} />)}
+              {({ input }) => (
+                <input type="email" placeholder="Enter Email" {...input} />
+              )}
             </Field>
             <Field name="password">
-              {({ input }) => (<input type="password" placeholder="Password" {...input} />)}
+              {({ input }) => (
+                <input type="password" placeholder="Password" {...input} />
+              )}
             </Field>
             <Field name="confirm">
-              {({ input }) => (<input type="password" placeholder="Confirm password" {...input} />)}
+              {({ input }) => (
+                <input
+                  type="password"
+                  placeholder="Confirm password"
+                  {...input}
+                />
+              )}
             </Field>
             <button type="submit">Sign up</button>
           </form>
         )}
       />
-
     </div>
   );
 };
