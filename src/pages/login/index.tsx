@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Field } from 'react-final-form';
 
 export default function Login() {
-  const onSubmit = (e) => {
+  const onSubmit = (e: any) => {
     console.log(e);
   };
   return (

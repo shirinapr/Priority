@@ -17,9 +17,5 @@
     "baseUrl": "./src"
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"],
-  "rules": {
-    "react/jsx-filename-extension": false,
-    "react/jsx-props-no-spreading": false
-  }
+  "exclude": ["node_modules"]
 }
