@@ -1,10 +1,15 @@
 import React from 'react';
+import { useAppDispatch } from 'hooks';
 import { Form, Field } from 'react-final-form';
+import { getUsers } from 'reducers/users';
 
 export default function Register() {
-  const onSubmit = (e) => {
-    console.log(e);
+  const dispatch = useAppDispatch();
+
+  const onSubmit = (e: any) => {
+    dispatch(getUsers(e));
   };
+
   return (
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
       <div className="w-full p-6 m-auto bg-white rounded-md shadow-lg lg:max-w-xl">
